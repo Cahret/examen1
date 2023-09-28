@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>EXAMENJPA</name>
+	<comment></comment>
+	<projects>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Medicamentos</title>
+</head>
+<body>
+    <h1>Lista de Medicamentos</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>
+'1', 'Paracetamol', 'Analgésico común', 'Analgésico '5', '100', '2024-12-31', 'Genérico Pharma')
+       ('2', 'Amoxicilina', 'Antibiótico', 'Antibiótico',  '10.5', '50', '2023-11-15', 'Farmacia A')
+    ('1', 'Vitamina C', 'Suplemento Vitamínico', 'vitamina', '5', '100', '2024-08-01', 'Proveedor B')
+    ('1', 'Ibuprofeno', 'Antiinflamatorio', 'Analgésico ', '5', '100', '2023-10-20', 'Genérico Pharma')
+    ('1', 'Omeprazol', 'Medicamento', 'Gi', '5', '100', '2023-12-10', 'Farmacia A')
+</th>
+
+
+            <th>Descripción</th>
+        </tr>
+        <c:forEach items="${medicamentos}" var="medicamento">
+            <tr>
+                <td>${medicamento.id}</td>
+                <td>${medicamento.nombre}</td>
+                <td>${medicamento.descripcion}</td>
+    <td>${medicamento.categoria}</td>
+    <td>${medicamento.Precio}</td>
+<td>${medicamento.Stock}</td>
+<td>${medicamento.Fecha}</td>
+<td>${medicamento.Proveedor}</td>
+
+            </tr>
+        </c:forEach>
+    </table>
+</body>
+</html>
