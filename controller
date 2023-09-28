@@ -1,0 +1,26 @@
+@Controller
+@RequestMapping("/medicamentos")
+public class MedicamentoController {
+
+    @Autowired
+    private MedicamentoService medicamentoService;
+
+    @GetMapping("/listar")
+    public String listarMedicamentos(Model model) {
+        List<Medicamento> medicamentos = medicamentoService.listarMedicamentos();
+        model.addAttribute("medicamentos", medicamentos);
+        return "medicamentos";
+    }
+
+    @GetMapping("/agregar")
+    public String mostrarFormularioAgregar(Model model) {
+        model.addAttribute("medicamento", new Medicamento());
+        return "editarMedicamento";
+    }
+
+    @PostMapping("/editarMedicamento")
+    public String editarMedicamento(@ModelAttribute("medicamento") Medicamento medicamento) {
+        medicamentoService.editarMedicamento(medicamento);
+        return "redirect:/medicamentos/listar";
+    }
+}
