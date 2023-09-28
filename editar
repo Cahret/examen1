@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Medicamento</title>
+</head>
+<body>
+    <h1>Editar Medicamento</h1>
+    <form action="/editarMedicamento" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+        <label for="descripcion">Descripción:</label>
+  <label for="categoria">categoria:</label>
+ <textarea id="categoria" name="categoria" rows="4" required></textarea><br><br>
+        <textarea id="descripcion" name="descripcion" rows="4" required></textarea><br><br>
+        <input type="submit" value="editar">
+    </form>
+</body>
+</html>
